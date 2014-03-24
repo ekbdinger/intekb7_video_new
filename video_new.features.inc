@@ -19,6 +19,13 @@ function video_new_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function video_new_views_api() {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function video_new_node_info() {
