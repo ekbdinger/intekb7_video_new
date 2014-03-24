@@ -78,6 +78,16 @@ function video_new_feeds_importer_default() {
             'target' => 'field_video_link:url',
             'unique' => FALSE,
           ),
+          7 => array(
+            'source' => 'webinar_category',
+            'target' => 'field_webinar_category',
+            'unique' => FALSE,
+          ),
+          8 => array(
+            'source' => 'date',
+            'target' => 'field_doc_date:start',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '0',
         'input_format' => '2',

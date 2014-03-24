@@ -20,7 +20,7 @@ function video_new_field_default_field_instances() {
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'short',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -102,7 +102,7 @@ function video_new_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'rel_remove' => 'default',
-      'title' => 'optional',
+      'title' => 'none',
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -269,6 +269,43 @@ function video_new_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-video-field_webinar_category'
+  $field_instances['node-video-field_webinar_category'] = array(
+    'bundle' => 'video',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This will apply only for webinars, but this mirrors what is on my.eclinicalworks.com',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_webinar_category',
+    'label' => 'Webinar Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-video-taxonomy_vocabulary_10'
   $field_instances['node-video-taxonomy_vocabulary_10'] = array(
     'bundle' => 'video',
@@ -347,11 +384,13 @@ function video_new_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Enter some notes about what is discussed in the video');
   t('Last Updated');
+  t('This will apply only for webinars, but this mirrors what is on my.eclinicalworks.com');
   t('Version');
   t('Video Link');
   t('Video Notes');
   t('Video Type');
   t('Vimeo Link');
+  t('Webinar Category');
   t('What type of video is it');
   t('What version of the eCW software does this video demonstrate.');
   t('When was the video created.');

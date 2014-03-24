@@ -17,5 +17,13 @@ function video_new_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => 0,
     ),
+    'webinar_category' => array(
+      'name' => 'Webinar Category',
+      'machine_name' => 'webinar_category',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
   );
 }
