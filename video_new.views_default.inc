@@ -160,11 +160,6 @@ function video_new_views_default_views() {
 <h2>[field_webinar_category]</h2>';
   $handler->display->display_options['fields']['field_webinar_category']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_webinar_category']['type'] = 'taxonomy_term_reference_plain';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -424,11 +419,10 @@ function video_new_views_default_views() {
     'field_doc_date' => 'field_doc_date',
     'field_video_notes' => 'field_video_notes',
     'field_webinar_category' => 'field_webinar_category',
-    'field_vimeo_link' => 'field_vimeo_link',
     'timestamp' => 'timestamp',
     'nothing' => 'nothing',
   );
-  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['default'] = 'field_webinar_category';
   $handler->display->display_options['style_options']['info'] = array(
     'title' => array(
       'sortable' => 1,
@@ -474,13 +468,6 @@ function video_new_views_default_views() {
     ),
     'field_webinar_category' => array(
       'sortable' => 1,
-      'default_sort_order' => 'asc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_vimeo_link' => array(
-      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -541,11 +528,6 @@ function video_new_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Video Notes */
-  $handler->display->display_options['fields']['field_video_notes']['id'] = 'field_video_notes';
-  $handler->display->display_options['fields']['field_video_notes']['table'] = 'field_data_field_video_notes';
-  $handler->display->display_options['fields']['field_video_notes']['field'] = 'field_video_notes';
-  $handler->display->display_options['fields']['field_video_notes']['label'] = 'Notes';
   /* Field: Content: Webinar Category */
   $handler->display->display_options['fields']['field_webinar_category']['id'] = 'field_webinar_category';
   $handler->display->display_options['fields']['field_webinar_category']['table'] = 'field_data_field_webinar_category';
@@ -565,11 +547,6 @@ function video_new_views_default_views() {
   $handler->display->display_options['fields']['timestamp']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['timestamp']['alter']['text'] = '<strong> <p class="text-danger">[timestamp]</p></strong>';
   $handler->display->display_options['fields']['timestamp']['element_label_colon'] = FALSE;
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<span class="glyphicon glyphicon-facetime-video"></span>';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
