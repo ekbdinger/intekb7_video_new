@@ -22,11 +22,11 @@ function video_new_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'New Video Content Type (Admin Page)';
+  $handler->display->display_options['title'] = 'New Video Content Listing Page';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
-    5 => '5',
+    3 => '3',
   );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -740,7 +740,7 @@ function video_new_views_default_views() {
   $handler->display->display_options['filters']['field_doc_date_value']['field'] = 'field_doc_date_value';
   $handler->display->display_options['filters']['field_doc_date_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_doc_date_value']['expose']['operator_id'] = 'field_doc_date_value_op';
-  $handler->display->display_options['filters']['field_doc_date_value']['expose']['label'] = 'Last Updated (field_doc_date)';
+  $handler->display->display_options['filters']['field_doc_date_value']['expose']['label'] = 'Year';
   $handler->display->display_options['filters']['field_doc_date_value']['expose']['operator'] = 'field_doc_date_value_op';
   $handler->display->display_options['filters']['field_doc_date_value']['expose']['identifier'] = 'field_doc_date_value';
   $handler->display->display_options['filters']['field_doc_date_value']['expose']['remember_roles'] = array(
