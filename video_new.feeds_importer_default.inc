@@ -88,6 +88,11 @@ function video_new_feeds_importer_default() {
             'target' => 'field_doc_date:start',
             'unique' => FALSE,
           ),
+          9 => array(
+            'source' => 'tags',
+            'target' => 'taxonomy_vocabulary_17',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '0',
         'input_format' => '2',

@@ -343,6 +343,46 @@ function video_new_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-video-taxonomy_vocabulary_17'
+  $field_instances['node-video-taxonomy_vocabulary_17'] = array(
+    'bundle' => 'video',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'taxonomy_vocabulary_17',
+    'label' => 'Tags',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 10,
+    ),
+  );
+
   // Exported field_instance: 'node-video-taxonomy_vocabulary_26'
   $field_instances['node-video-taxonomy_vocabulary_26'] = array(
     'bundle' => 'video',
@@ -384,6 +424,7 @@ function video_new_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Enter some notes about what is discussed in the video');
   t('Last Updated');
+  t('Tags');
   t('This will apply only for webinars, but this mirrors what is on my.eclinicalworks.com');
   t('Version');
   t('Video Link');

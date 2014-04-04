@@ -9,6 +9,14 @@
  */
 function video_new_taxonomy_default_vocabularies() {
   return array(
+    'vocabulary_17' => array(
+      'name' => 'Tags',
+      'machine_name' => 'vocabulary_17',
+      'description' => 'Free Tagging',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
     'vocabulary_26' => array(
       'name' => 'Video Type',
       'machine_name' => 'vocabulary_26',
