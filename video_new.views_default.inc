@@ -119,11 +119,6 @@ function video_new_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Vimeo Link */
-  $handler->display->display_options['fields']['field_vimeo_link']['id'] = 'field_vimeo_link';
-  $handler->display->display_options['fields']['field_vimeo_link']['table'] = 'field_data_field_vimeo_link';
-  $handler->display->display_options['fields']['field_vimeo_link']['field'] = 'field_vimeo_link';
-  $handler->display->display_options['fields']['field_vimeo_link']['click_sort_column'] = 'fid';
   /* Field: Content: Version */
   $handler->display->display_options['fields']['taxonomy_vocabulary_10']['id'] = 'taxonomy_vocabulary_10';
   $handler->display->display_options['fields']['taxonomy_vocabulary_10']['table'] = 'field_data_taxonomy_vocabulary_10';
@@ -492,11 +487,6 @@ function video_new_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Vimeo Link */
-  $handler->display->display_options['fields']['field_vimeo_link']['id'] = 'field_vimeo_link';
-  $handler->display->display_options['fields']['field_vimeo_link']['table'] = 'field_data_field_vimeo_link';
-  $handler->display->display_options['fields']['field_vimeo_link']['field'] = 'field_vimeo_link';
-  $handler->display->display_options['fields']['field_vimeo_link']['click_sort_column'] = 'fid';
   /* Field: Content: Version */
   $handler->display->display_options['fields']['taxonomy_vocabulary_10']['id'] = 'taxonomy_vocabulary_10';
   $handler->display->display_options['fields']['taxonomy_vocabulary_10']['table'] = 'field_data_taxonomy_vocabulary_10';
@@ -531,9 +521,13 @@ function video_new_views_default_views() {
   $handler->display->display_options['fields']['field_webinar_category']['id'] = 'field_webinar_category';
   $handler->display->display_options['fields']['field_webinar_category']['table'] = 'field_data_field_webinar_category';
   $handler->display->display_options['fields']['field_webinar_category']['field'] = 'field_webinar_category';
-  $handler->display->display_options['fields']['field_webinar_category']['label'] = '';
   $handler->display->display_options['fields']['field_webinar_category']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_webinar_category']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Tags */
+  $handler->display->display_options['fields']['taxonomy_vocabulary_17']['id'] = 'taxonomy_vocabulary_17';
+  $handler->display->display_options['fields']['taxonomy_vocabulary_17']['table'] = 'field_data_taxonomy_vocabulary_17';
+  $handler->display->display_options['fields']['taxonomy_vocabulary_17']['field'] = 'taxonomy_vocabulary_17';
+  $handler->display->display_options['fields']['taxonomy_vocabulary_17']['delta_offset'] = '0';
   /* Field: Content: Has new content */
   $handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
   $handler->display->display_options['fields']['timestamp']['table'] = 'history';
