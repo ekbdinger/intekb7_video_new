@@ -33,7 +33,7 @@ function video_new_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '100';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '250';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
@@ -472,6 +472,146 @@ function video_new_views_default_views() {
   /* Display: Admin Page */
   $handler = $view->new_display('page', 'Admin Page', 'page');
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Bulk operations: Content */
+  $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+  $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+    'action::node_assign_owner_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::views_bulk_operations_delete_item' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::views_bulk_operations_script_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::flag_node_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_make_sticky_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_make_unsticky_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::502000' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::views_bulk_operations_modify_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+      'settings' => array(
+        'show_all_tokens' => 1,
+        'display_values' => array(
+          'video::field_webinar_category' => 'video::field_webinar_category',
+          'video::taxonomy_vocabulary_10' => 'video::taxonomy_vocabulary_10',
+          'video::taxonomy_vocabulary_17' => 'video::taxonomy_vocabulary_17',
+          'video::taxonomy_vocabulary_26' => 'video::taxonomy_vocabulary_26',
+        ),
+      ),
+    ),
+    'action::views_bulk_operations_argument_selector_action' => array(
+      'selected' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+      'settings' => array(
+        'url' => '',
+      ),
+    ),
+    'action::node_promote_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_publish_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_unpromote_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_save_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::system_send_email_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::2' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_unpublish_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_unpublish_by_keyword_action' => array(
+      'selected' => 0,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+  );
   /* Field: Global: View result counter */
   $handler->display->display_options['fields']['counter']['id'] = 'counter';
   $handler->display->display_options['fields']['counter']['table'] = 'views';
@@ -828,61 +968,6 @@ function video_new_views_default_views() {
   );
   $handler->display->display_options['filters']['field_doc_date_value']['granularity'] = 'year';
   $handler->display->display_options['filters']['field_doc_date_value']['year_range'] = '-5:+0';
-  /* Filter criterion: Content: Has new content */
-  $handler->display->display_options['filters']['timestamp']['id'] = 'timestamp';
-  $handler->display->display_options['filters']['timestamp']['table'] = 'history';
-  $handler->display->display_options['filters']['timestamp']['field'] = 'timestamp';
-  $handler->display->display_options['filters']['timestamp']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['timestamp']['expose']['operator_id'] = '';
-  $handler->display->display_options['filters']['timestamp']['expose']['label'] = 'Has new content';
-  $handler->display->display_options['filters']['timestamp']['expose']['operator'] = 'timestamp_op';
-  $handler->display->display_options['filters']['timestamp']['expose']['identifier'] = 'timestamp';
-  $handler->display->display_options['filters']['timestamp']['expose']['remember_roles'] = array(
-    2 => 0,
-    3 => '3',
-    1 => 0,
-    23 => 0,
-    21 => 0,
-    36 => 0,
-    25 => 0,
-    46 => 0,
-    31 => 0,
-    19 => 0,
-    14 => 0,
-    15 => 0,
-    13 => 0,
-    5 => 0,
-    22 => 0,
-    12 => 0,
-    38 => 0,
-    40 => 0,
-    29 => 0,
-    32 => 0,
-    35 => 0,
-    28 => 0,
-    16 => 0,
-    45 => 0,
-    27 => 0,
-    24 => 0,
-    37 => 0,
-    34 => 0,
-    18 => 0,
-    17 => 0,
-    33 => 0,
-    44 => 0,
-    20 => 0,
-    7 => 0,
-    8 => 0,
-    47 => 0,
-    48 => 0,
-    49 => 0,
-    51 => 0,
-    52 => 0,
-    53 => 0,
-    54 => 0,
-    55 => 0,
-    56 => 0,
-  );
   $handler->display->display_options['path'] = 'new-videos';
 
   /* Display: Listing Page */
