@@ -27,7 +27,7 @@ function video_new_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -76,7 +76,7 @@ function video_new_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -114,7 +114,7 @@ function video_new_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -126,11 +126,11 @@ function video_new_field_default_field_instances() {
     'description' => 'Enter some notes about what is discussed in the video',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -184,7 +184,7 @@ function video_new_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 9,
     ),
   );
 
@@ -195,13 +195,13 @@ function video_new_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'file_entity',
         'settings' => array(
           'file_view_mode' => 'default',
         ),
         'type' => 'file_rendered',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -281,7 +281,7 @@ function video_new_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -302,7 +302,7 @@ function video_new_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -318,7 +318,7 @@ function video_new_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -355,7 +355,7 @@ function video_new_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 8,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -379,7 +379,7 @@ function video_new_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
+      'weight' => 8,
     ),
   );
 
@@ -395,7 +395,7 @@ function video_new_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',

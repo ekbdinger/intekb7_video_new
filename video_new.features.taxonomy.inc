@@ -9,6 +9,14 @@
  */
 function video_new_taxonomy_default_vocabularies() {
   return array(
+    'vocabulary_10' => array(
+      'name' => 'eCW Version',
+      'machine_name' => 'vocabulary_10',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+    ),
     'vocabulary_17' => array(
       'name' => 'Tags',
       'machine_name' => 'vocabulary_17',

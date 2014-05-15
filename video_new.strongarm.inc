@@ -83,6 +83,12 @@ function video_new_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -90,7 +96,7 @@ function video_new_strongarm() {
           'weight' => '0',
         ),
         'badges' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
       ),
       'display' => array(),
